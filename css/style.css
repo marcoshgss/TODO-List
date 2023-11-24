@@ -28,10 +28,11 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.4s;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #102f5e;
+    background-color: #1f232b;
     color: #fff;
 }
 
