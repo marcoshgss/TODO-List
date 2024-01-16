@@ -1,0 +1,123 @@
+/* Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    color: #333;
+}
+
+body {
+    background-image: url(../img/neon-city.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.card {
+    max-width: 450px;
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.label input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    margin-right: 0.3rem;
+    border: 0;
+    /* background-color: transparent; */
+    border-bottom: 2px solid #102f5e;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+}
+
+.label input:focus {
+    border-bottom: 2px solid #1d67d6;
+}
+
+.label label{
+    pointer-events: none;
+    position: absolute;
+    color: #102f5e;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label input:focus + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #102f5e;
+}
+
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    cursor: pointer;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 30px;
+    border-radius: 4px; 
+    outline: none;
+    transition: all .4s ease-out;
+}
+
+button:hover {
+    background-color: #102f5e;
+    color: #fdfdfd;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+    color: #ccc;
+}
+
+p {
+    color: #333;
+    font-size: 14pt;
+    text-align: center;
+}
+
+a {
+    color:#102f5e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+a:hover {
+    color: #333;
+}
