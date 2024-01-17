@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(../img/undefined\ -\ Imgur.png);
+    background-image: url(../img/undefined\ -\ Imgur\ \(1\).jpg);
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -22,7 +22,7 @@ body {
 }
 
 .card {
-    max-width: 450px;
+    width: 400px;
     background-color: #fdfdfd;
     padding: 30px;
     border-radius: 15px;
@@ -96,30 +96,6 @@ button:hover {
 .justify-center {
     display: flex;
     justify-content: center;
-}
-
-hr {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    width: 60%;
-    color: #ccc;
-}
-
-p {
-    color: #333;
-    font-size: 14pt;
-    text-align: center;
-}
-
-a {
-    color:#102f5e;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all .3s ease-out;
-}
-
-a:hover {
-    color: #333;
 }
 
 .fa-eye {
