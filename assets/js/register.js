@@ -5,11 +5,11 @@ const btnConfirme = document.querySelector("#verConfirmSenha");
 
 const nome = document.querySelector("#nome");
 const labelNome = document.querySelector("#labelNome");
-let validNome = false
+let validNome = false;
 
 const usuario = document.querySelector("#usuario");
 const labelUsuario = document.querySelector("#labelUsuario");
-let validUsuario = false
+let validUsuario = false;
 
 const senha = document.querySelector("#senha");
 const labelSenha = document.querySelector("#labelSenha");
@@ -19,12 +19,36 @@ const confirmSenha = document.querySelector("#confirmSenha");
 const labelConfirmeSenha = document.querySelector("#labelConfirmeSenha");
 let validConfirmSenha = false;
 
+let mensagemErro = document.querySelector("#mensagemErro");
+let mensagemSucesso = document.querySelector("#mensagemSucesso");
+
 // Funções
-function cadastrar(){
+function cadastrar() {
     if (validNome && validUsuario && validSenha && validConfirmSenha) {
-        alert("Cadastro feito!")
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
+
+        listaUser.push({
+            nomeCadastro: nome.value,
+            userCadastro: usuario.value,
+            senhaCadastro: senha.value
+        })
+
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
+        mensagemSucesso.setAttribute('style', 'display: block');
+        mensagemSucesso.innerHTML = '<strong>Cadastrando usuário...</strong>';
+        mensagemErro.setAttribute('style', 'display: none');
+        mensagemErro.innerHTML = '';
+
+        setTimeout(() => {
+            window.location.href = "../html/login.html"
+        }, 3000);
+
     } else {
-        alert("Tá tudo vazio!!!")
+        mensagemErro.setAttribute('style', 'display: block');
+        mensagemErro.innerHTML = '<strong>Por favor, preencha todos os campos antes de cadastrar</strong>';
+        mensagemSucesso.innerHTML = '';
+        mensagemSucesso.setAttribute('style', 'display: none');
     }
 }
 
