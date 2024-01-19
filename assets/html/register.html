@@ -16,24 +16,25 @@
             <h1>Cadastrar</h1>
             <div class="label">
                 <input type="text" id="nome" placeholder="" required>
-                <label for="nome">Nome</label>
+                <label id="labelNome" for="nome">Nome</label>
             </div>
             <div class="label">
                 <input type="text" id="usuario" placeholder="" required>
-                <label for="usuario">Usuário</label>
+                <label id="labelUsuario" for="usuario">Usuário</label>
             </div>
             <div class="label">
                 <input type="password" id="senha" placeholder="" required>
-                <label for="senha">Senha</label>
+                <label id="labelSenha" for="senha">Senha</label>
                 <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
             </div>
             <div class="label">
                 <input type="password" id="confirmSenha" placeholder="" required>
-                <label for="confirmSenha">Confirma Senha</label>
+                <label id="labelConfirmeSenha" for="confirmSenha">Confirmar Senha</label>
                 <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
             </div>
+
             <div class="justify-center">
-                <button>Cadastrar</button>
+                <button onclick="cadastrar()">Cadastrar</button>
             </div>
         </div>
     </div>
