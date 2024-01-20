@@ -44,7 +44,11 @@ function entrar() {
 
     if (usuario.value == userValid.user && senha.value == userValid.senha) {
         window.location.href = "../../index.html"
-    
+        let token = Math.random().toString(16) + Math.random().toString(16)
+        localStorage.setItem('token', token)
+
+        localStorage.setItem('userLogado', JSON.stringify(userValid))
+        
     } else {
         userLabel.setAttribute('style', 'color: red')
         usuario.setAttribute('style', 'border-color: red')
@@ -55,4 +59,3 @@ function entrar() {
         usuario.focus()
     }
 }
-
