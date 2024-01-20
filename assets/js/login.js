@@ -32,6 +32,27 @@ function entrar() {
 
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
 
-    console.log(listaUser)
+    listaUser.forEach((item) => {
+        if (usuario.value == item.userCadastro && senha.value == item.senhaCadastro) {
+            userValid = {
+                nome: item.nomeCadastro,
+                user: item.userCadastro,
+                senha: item.senhaCadastro
+            }
+        }
+    });
+
+    if (usuario.value == userValid.user && senha.value == userValid.senha) {
+        window.location.href = "../../index.html"
+    
+    } else {
+        userLabel.setAttribute('style', 'color: red')
+        usuario.setAttribute('style', 'border-color: red')
+        senhaLabel.setAttribute('style', 'color: red')
+        senha.setAttribute('style', 'border-color: red')
+        mensagemErro.setAttribute('style', 'display: block')
+        mensagemErro.innerHTML = 'Usuário ou senha incorretos'
+        usuario.focus()
+    }
 }
 
