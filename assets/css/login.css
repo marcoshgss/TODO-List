@@ -129,3 +129,12 @@ a:hover {
     cursor: pointer;
     color: #333;
 }
+
+#mensagemErro {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
