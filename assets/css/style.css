@@ -48,6 +48,25 @@ button i {
 
 }
 
+.justify-center {
+    display: flex;
+    justify-content:left;
+    align-items: end;
+    width: 100%;
+}
+
+.justify-center button {
+    margin-left: 15rem;
+    margin-top: 2rem;
+    border-radius: 7px;
+    padding: 9px 17px;
+}
+
+#logado {
+    margin-left: 19rem;
+    color:#fff;
+}
+
 input, select {
     padding: .25rem .5rem;
 }
@@ -63,6 +82,7 @@ input, select {
     background-color: #fdfdfd;
     padding: 1.5rem;
     border-radius: 15px;
+    margin-top: 2rem;
 }
 
 .todo-container header {

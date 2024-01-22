@@ -49,7 +49,12 @@ function entrar() {
 
         localStorage.setItem('userLogado', JSON.stringify(userValid))
         
-    } else {
+     
+    }  else if (usuario.value == null && senha.value == null) {
+        mensagemErro.innerHTML = 'Usuário ou senha incorretos'
+    }
+  
+     else {
         userLabel.setAttribute('style', 'color: red')
         usuario.setAttribute('style', 'border-color: red')
         senhaLabel.setAttribute('style', 'color: red')
