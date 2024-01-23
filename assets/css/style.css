@@ -12,7 +12,8 @@ html {
 }
 
 body {
-    background-image: url("../img/undefined\ -\ Imgur1.jpg");
+    background-image: url("../img/pexels-3.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;

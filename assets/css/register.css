@@ -8,10 +8,11 @@
 }
 
 body {
-    background-image: url(../img/undefined\ -\ Imgur\ \(1\).jpg);
+    background-image: url("../img/pexels-2.jpg");
     background-repeat:no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position:center;
+    background-attachment: fixed; 
 }
 
 .container {

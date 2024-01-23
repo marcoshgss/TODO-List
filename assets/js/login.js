@@ -14,7 +14,9 @@ btn.addEventListener('click', () => {
     }
 })
 
-function entrar() {
+
+
+function entrar(e) {
     const usuario = document.querySelector("#usuario");
     const userLabel = document.querySelector("#userLabel");
 
@@ -30,6 +32,7 @@ function entrar() {
         senha: ''
     }
 
+
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
 
     listaUser.forEach((item) => {
@@ -42,25 +45,32 @@ function entrar() {
         }
     });
 
-    if (usuario.value == userValid.user && senha.value == userValid.senha) {
-        window.location.href = "../../index.html"
-        let token = Math.random().toString(16) + Math.random().toString(16)
-        localStorage.setItem('token', token)
 
-        localStorage.setItem('userLogado', JSON.stringify(userValid))
-        
-     
-    }  else if (usuario.value == null && senha.value == null) {
-        mensagemErro.innerHTML = 'Usuário ou senha incorretos'
+    if (usuario.value == '' && senha.value == '') {
+        userLabel.setAttribute('style', 'color: red');
+        usuario.setAttribute('style', 'border-color: red');
+        senhaLabel.setAttribute('style', 'color: red');
+        senha.setAttribute('style', 'border-color: red');
+        mensagemErro.setAttribute('style', 'display: block');
+        mensagemErro.innerHTML = 'preencha os campos necessários';
+        usuario.focus();
     }
-  
-     else {
-        userLabel.setAttribute('style', 'color: red')
-        usuario.setAttribute('style', 'border-color: red')
-        senhaLabel.setAttribute('style', 'color: red')
-        senha.setAttribute('style', 'border-color: red')
-        mensagemErro.setAttribute('style', 'display: block')
-        mensagemErro.innerHTML = 'Usuário ou senha incorretos'
-        usuario.focus()
+
+    else if (usuario.value == userValid.user && senha.value == userValid.senha) {
+        window.location.href = "../../index.html";
+        let token = Math.random().toString(16) + Math.random().toString(16);
+        localStorage.setItem('token', token);
+
+        localStorage.setItem('userLogado', JSON.stringify(userValid));
+    }
+
+    else {
+        userLabel.setAttribute('style', 'color: red');
+        usuario.setAttribute('style', 'border-color: red');
+        senhaLabel.setAttribute('style', 'color: red');
+        senha.setAttribute('style', 'border-color: red');
+        mensagemErro.setAttribute('style', 'display: block');
+        mensagemErro.innerHTML = 'Usuário ou senha incorretos';
+        usuario.focus();
     }
 }

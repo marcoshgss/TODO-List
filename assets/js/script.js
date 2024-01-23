@@ -14,19 +14,18 @@ let oldInputValue;
 // Funções
 let userLogado = JSON.parse(localStorage.getItem('userLogado'))
 
-let logado = document.querySelector('#logado')
-logado.innerHTML = `Olá ${userLogado.nome}`
+let logado = document.querySelector('#logado');
+logado.innerHTML = `Olá ${userLogado.nome}`;
 
 if (localStorage.getItem('token') == null) {
-    alert('Você precisa estar logado para acessar essa página')
-    window.location.href = "assets/./html/login.html"
+    alert('Você precisa estar logado para acessar essa página');
+    window.location.href = "assets/./html/login.html";
 }
 
 function sair() {
-    localStorage.removeItem('token')
-    localStorage.removeItem('userLogado')
-    window.location.href = "assets/./html/login.html"
-    
+    localStorage.removeItem('token');
+    localStorage.removeItem('userLogado');
+    window.location.href = "assets/./html/login.html";
 }
 
 const saveTodo = (text, done = 0, save = 1) => {
@@ -93,7 +92,7 @@ const getSearchTodos = (search) => {
     todos.forEach((todo) => {
         let todoTitle = todo.querySelector("h3").innerText.toLowerCase();
 
-        const normalizedSearch = search.toLowerCase()
+        const normalizedSearch = search.toLowerCase();
 
         todo.style.display = "flex";
 
@@ -113,7 +112,7 @@ const filterTodos = (filterValue) => {
 
         case "done":
             todos.forEach((todo) => 
-              todo.classList.contains("done") 
+              todo.classList.contains("done")
                 ? (todo.style.display = "flex") 
                 : (todo.style.display = "none")
             );
@@ -230,7 +229,7 @@ const loadTodos = () => {
 const saveTodosLocalStorage = (todo) => {
     const todos = getTodosLocalStorage();
 
-    todos.push(todo)
+    todos.push(todo);
 
     localStorage.setItem("todos", JSON.stringify(todos));
 };

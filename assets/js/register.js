@@ -33,7 +33,7 @@ function cadastrar() {
             senhaCadastro: senha.value
         })
 
-        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+        localStorage.setItem('listaUser', JSON.stringify(listaUser));
 
         mensagemSucesso.setAttribute('style', 'display: block');
         mensagemSucesso.innerHTML = '<strong>Cadastrando usuário...</strong>';
@@ -56,14 +56,14 @@ function cadastrar() {
 nome.addEventListener('keyup', () => {
     if (nome.value.length <= 3) {
         labelNome.setAttribute('style', 'color: red');
-        labelNome.innerHTML = 'Nome * Insira no mínimo 4 caracteres'
-        nome.setAttribute('style', 'border-color: red')
-        validNome = false
+        labelNome.innerHTML = 'Nome * Insira no mínimo 4 caracteres';
+        nome.setAttribute('style', 'border-color: red');
+        validNome = false;
     } else {
         labelNome.setAttribute('style', 'color: green');
-        labelNome.innerHTML = 'Nome '
-        nome.setAttribute('style', 'border-color: green')
-        validNome = true
+        labelNome.innerHTML = 'Nome ';
+        nome.setAttribute('style', 'border-color: green');
+        validNome = true;
     }
 })
 
@@ -72,12 +72,12 @@ usuario.addEventListener('keyup', () => {
         labelUsuario.setAttribute('style', 'color: red');
         labelUsuario.innerHTML = 'Usuário * Insira no mínimo 5 caracteres';
         usuario.setAttribute('style', 'border-color: red');
-        validUsuario = false
+        validUsuario = false;
     } else {
         labelUsuario.setAttribute('style', 'color: green');
         labelUsuario.innerHTML = 'Usuário';
         usuario.setAttribute('style', 'border-color: green');
-        validUsuario = true
+        validUsuario = true;
     }
 })
 
@@ -86,12 +86,12 @@ senha.addEventListener('keyup', () => {
         labelSenha.setAttribute('style', 'color: red');
         labelSenha.innerHTML = 'Senha * Insira no mínimo 6 caracteres';
         senha.setAttribute('style', 'border-color: red');
-        validSenha = false
+        validSenha = false;
     } else {
         labelSenha.setAttribute('style', 'color: green');
         labelSenha.innerHTML = 'Senha';
         senha.setAttribute('style', 'border-color: green');
-        validSenha = true
+        validSenha = true;
     }
 })
 
@@ -100,12 +100,12 @@ confirmSenha.addEventListener('keyup', () => {
         labelConfirmeSenha.setAttribute('style', 'color: red');
         labelConfirmeSenha.innerHTML = 'Confirmar Senha * As senhas não conferem';
         confirmSenha.setAttribute('style', 'border-color: red');
-        validConfirmSenha = false
+        validConfirmSenha = false;
     } else {
         labelConfirmeSenha.setAttribute('style', 'color: green');
         labelConfirmeSenha.innerHTML = 'Confirmar Senha';
         confirmSenha.setAttribute('style', 'border-color: green');
-        validConfirmSenha = true
+        validConfirmSenha = true;
     }
 })
 
