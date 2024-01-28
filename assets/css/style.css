@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background-image: url("../img/pexels-3.jpg");
+    background-image: url("../img/pexels-1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -51,21 +51,25 @@ button i {
 
 .justify-center {
     display: flex;
-    justify-content:left;
-    align-items: end;
+    justify-content:center;
     width: 100%;
 }
 
 .justify-center button {
     margin-left: 15rem;
-    margin-top: 2rem;
+    margin-top: 40px;
     border-radius: 7px;
-    padding: 9px 17px;
+    padding: 10px 22px;
+    font-weight: bold;
 }
 
 #logado {
-    margin-left: 19rem;
+    margin-left: 20rem;
+    margin-top: 2rem;
     color:#fff;
+    background-color: #102f5e90;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 input, select {
@@ -181,4 +185,78 @@ input, select {
     color: #fff;
     text-decoration: line-through;
     font-style: italic;
+}
+
+@media (max-width: 576px){
+    html, body {
+        overflow-x: hidden;
+    }
+
+    #logado {
+        margin-top: 38px;
+        color:#fff;
+        background-color: #102f5e90;
+        border-radius: 8px;
+        padding: 2px;
+        width: 16rem;
+    }
+
+    .justify-center {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .name-container {
+       width: 50%;
+    }
+
+    .the-button {
+        padding-right: 44%;
+        margin-right: 10rem;
+        width: 50%;
+    }
+    .justify-center button {
+        margin-left: 38vh;
+    }
+
+    .justify-center #logado {
+        margin-left: 9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    #logado {
+        margin-top: 38px;
+        color:#fff;
+        background-color: #102f5e90;
+        border-radius: 8px;
+        padding: 2px;
+        width: 16rem;
+    }
+
+    .justify-center {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .name-container {
+       width: 50%;
+    }
+
+    .the-button {
+        padding-right: 44%;
+        margin-right: 10rem;
+        width: 50%;
+    }
+    .justify-center button {
+        margin-left: 38vh;
+    }
+
+    .justify-center #logado {
+        margin-left: 6rem;
+    }
 }
