@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     font-family: Helvetica;
-    color: #333;
     box-sizing: border-box;
 }
 
@@ -46,7 +45,6 @@ button i {
     color: #102f5e;
     font-weight: bold;
     pointer-events: none;
-
 }
 
 .justify-center {
@@ -64,7 +62,7 @@ button i {
 }
 
 #logado {
-    margin-left: 20rem;
+    margin-left: 2rem;
     margin-top: 2rem;
     color:#fff;
     background-color: #102f5e90;
@@ -187,76 +185,69 @@ input, select {
     font-style: italic;
 }
 
-@media (max-width: 576px){
-    html, body {
-        overflow-x: hidden;
-    }
 
-    #logado {
-        margin-top: 38px;
-        color:#fff;
-        background-color: #102f5e90;
-        border-radius: 8px;
-        padding: 2px;
-        width: 16rem;
-    }
-
-    .justify-center {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .name-container {
-       width: 50%;
-    }
-
-    .the-button {
-        padding-right: 44%;
-        margin-right: 10rem;
-        width: 50%;
-    }
-    .justify-center button {
-        margin-left: 38vh;
-    }
-
-    .justify-center #logado {
-        margin-left: 9rem;
-    }
+.main-header {
+    background-color: #24252a40;
+    box-shadow: 0px, 3px, 10px #464646;
 }
 
-@media (max-width: 480px) {
-    html, body {
-        overflow-x: hidden;
+.nav-bar {
+    display: flex;
+    justify-content:end;
+    padding: 0.5rem 6rem;
+}
+
+.login-button button {
+    background-color: #fdfdfd;
+    border-radius: 7px;
+    padding: 10px 22px;
+    font-weight: bold;
+}
+
+.login-button button:hover {
+    background-color: #1f232b;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar{
+        padding: 1.5rem 4rem;
     }
 
-    #logado {
-        margin-top: 38px;
-        color:#fff;
-        background-color: #102f5e90;
-        border-radius: 8px;
-        padding: 2px;
-        width: 16rem;
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 
-    .justify-center {
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
         width: 100%;
-        justify-content: center;
     }
-
-    .name-container {
-       width: 50%;
-    }
-
-    .the-button {
-        padding-right: 44%;
-        margin-right: 10rem;
-        width: 50%;
-    }
-    .justify-center button {
-        margin-left: 35vh;
-    }
-
-    .justify-center #logado {
-        margin-left: 6rem;
+    
+    .open {
+        display: block;
     }
 }

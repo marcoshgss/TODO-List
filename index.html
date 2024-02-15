@@ -13,14 +13,28 @@
 </head>
 
 <body>
+    <header class="main-header">
+        <nav class="nav-bar">
+            <div class="login-button">
+                <button onclick="sair()">Sair</button>
+            </div>
+    
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <div class="login-button">
+                <button onclick="sair()">Sair</a></button>
+            </div>
+        </div>
+    </header>
+
     <div class="justify-center">
         <div class="name-container">
             <h1 id="logado"></h1>
         </div>
-        <div class="the-button">
-            <button onclick="sair()">Sair</button>
-        </div>
-    </div>
+    </div> 
     <div class="todo-container">
         <header>
             <h1>To-do list</h1>
