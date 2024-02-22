@@ -218,15 +218,17 @@ input, select {
 
 @media screen and (max-width: 730px) {
     .nav-bar{
-        padding: 1.5rem 4rem;
+        padding: 1.5rem 0;
     }
 
     .login-button {
         display: none;
     }
+
     .mobile-menu-icon {
         display: block;
     }
+
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
@@ -234,7 +236,7 @@ input, select {
     }
 
     .mobile-menu .nav-item {
-        display: block;
+        display:block;
         padding-top: 1.2rem;
     }
 
@@ -249,5 +251,14 @@ input, select {
     
     .open {
         display: block;
+    }
+
+    .todo-container {
+        max-width: 376px;
+        margin: 3rem auto;
+        background-color: #fdfdfd;
+        padding: 1.5rem;
+        border-radius: 15px;
+        margin-top: 2rem;
     }
 }
