@@ -10,8 +10,8 @@ Deste modo, é muito interessante usar uma lista de tarefas no dia a dia.
 
 ## 🔥 Introdução
 
-Coloque aqui as instruções e quais são os objetivos desse projeto, funcionalidades.
-Nesse projeto o usuário pode adicionar as suas taferas a ser feitas, além do complemento de autentificação de login.
+Coloquei aqui as instruções e quais são os objetivos desse projeto, e as suas funcionalidades.
+Nesse projeto o usuário pode adicionar as suas taferas a serem feitas, além do complemento de autentificação de login.
 
 As funcionalidades deste projeto é: 
 - Adicionar tarefas.
